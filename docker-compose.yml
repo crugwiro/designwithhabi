@@ -1,0 +1,20 @@
+# dance-studio-mvp/docker-compose.yml
+version: '3.8'
+services:
+  postgres_db:
+    image: postgres:13 # Or latest stable version
+    container_name: dancestudio_postgres_mvp
+    environment:
+      POSTGRES_USER: habimana       # Same as in .env
+      POSTGRES_PASSWORD: showdem2020 # Same as in .env
+      POSTGRES_DB: dancestudio_mvp  # Same as in .env
+    ports:
+      - "5432:5432" # Map host port 5432 to container port 5432
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      # Optional: Mount an init script to create tables
+      - ./db_init:/docker-entrypoint-initdb.d 
+        # This will run any .sql files in db_init when the container first starts
+
+volumes:
+  postgres_data: # Persists data even if container is removed

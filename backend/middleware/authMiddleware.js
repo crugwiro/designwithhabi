@@ -1,6 +1,6 @@
 // backend/middleware/authMiddleware.js
 const jwt = require('jsonwebtoken');
-require('dotenv').config({ path: '../../.env' });
+require('dotenv').config();
 
 const protect = (req, res, next) => {
     let token;

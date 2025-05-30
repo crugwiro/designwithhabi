@@ -14,7 +14,22 @@ services:
       - postgres_data:/var/lib/postgresql/data
       # Optional: Mount an init script to create tables
       - ./db_init:/docker-entrypoint-initdb.d 
-        # This will run any .sql files in db_init when the container first starts
+      # This will run any .sql files in db_init when the container first starts
+
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com  # Set default admin email
+      PGADMIN_DEFAULT_PASSWORD: admin  # Set default admin password
+    ports:
+      - "80:80"  # Expose pgAdmin on port 80
+    depends_on:
+      - postgres_db  # Ensure pgAdmin starts after PostgreSQL
+    volumes:
+      - pgadmin-data:/var/lib/pgadmin  # Persist pgAdmin data
 
 volumes:
   postgres_data: # Persists data even if container is removed
+  pgadmin-data: # Persists pgAdmin data even if container is removed

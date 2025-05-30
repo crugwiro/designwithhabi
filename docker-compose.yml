@@ -15,6 +15,11 @@ services:
       # Optional: Mount an init script to create tables
       - ./db_init:/docker-entrypoint-initdb.d 
       # This will run any .sql files in db_init when the container first starts
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U habimana -d dancestudio_mvp"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
 
   pgadmin:
@@ -29,6 +34,8 @@ services:
       - postgres_db  # Ensure pgAdmin starts after PostgreSQL
     volumes:
       - pgadmin-data:/var/lib/pgadmin  # Persist pgAdmin data
+
+
 
 volumes:
   postgres_data: # Persists data even if container is removed

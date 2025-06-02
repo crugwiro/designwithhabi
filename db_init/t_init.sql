@@ -9,7 +9,7 @@
 -- Admin/Instructor User
 -- Password for 'habiclemmo@gmail.com' (e.g., 'adminpass')
 INSERT INTO users (email, password_hash, role)
-VALUES ('habiclemmo@gmail.com', '$2b$10$0RZCXFwRD3TzXZsJwbxLDOoGfHJCt6flzMmfuvKrurC0WC4JgeNv2', 'admin')
+VALUES ('habiclemmo@gmail.com', '$2b$10$6yGPxUAuZXz0xER.u25CNe6o5r42myzMOyidZQdpkEWu8kCytHLrW', 'admin')
 ON CONFLICT (email) DO NOTHING;
 
 -- Student Users

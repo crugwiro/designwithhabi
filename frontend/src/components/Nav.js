@@ -11,7 +11,7 @@ function Nav({ user, onLogout }) {
 
     return (
         <nav className="navbar">
-            <Link to="/" className="nav-brand">DanceStudio</Link>
+            <Link to="/" className="nav-brand">DanceWithHabi</Link>
             <ul className="nav-links">
                 <li><Link to="/">Schedule</Link></li>
                 {user ? (

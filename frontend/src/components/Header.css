@@ -1,0 +1,129 @@
+/* Header.css */
+.app-header {
+    background-color: #222; /* Dark background like UFC */
+    color: white;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    position: sticky; /* Makes header stick on scroll */
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1200px; /* Or your preferred max width */
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-brand {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    /* Add your logo styling here if using an image */
+}
+
+.header-nav .nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin-left: 25px;
+    position: relative; /* For dropdown positioning */
+}
+
+.nav-link, .account-button {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 10px 0; /* For larger hover area */
+    transition: color 0.3s ease;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.nav-link:hover, .account-button:hover {
+    color: #ffc107; /* Example hover color */
+}
+
+/* Dropdown Menu Styling */
+.dropdown-parent {
+    /* Styles for the li element containing a dropdown */
+}
+.dropdown-menu {
+    display: block; /* Will be controlled by JS state */
+    position: absolute;
+    top: 100%; /* Position below the parent */
+    left: 0;
+    background-color: #333;
+    border: 1px solid #444;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    min-width: 180px;
+    z-index: 1001;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+.dropdown-menu li a, .dropdown-menu li button {
+    display: block;
+    padding: 8px 15px;
+    color: #f0f0f0;
+    text-decoration: none;
+    font-size: 0.95em;
+    white-space: nowrap;
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+}
+.dropdown-menu li a:hover, .dropdown-menu li button:hover {
+    background-color: #444;
+    color: #ffc107;
+}
+
+.header-actions .button {
+    margin-left: 15px;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+.button-login {
+    background-color: transparent;
+    border: 1px solid #ffc107;
+    color: #ffc107;
+}
+.button-login:hover {
+    background-color: #ffc107;
+    color: #222;
+}
+.button-signup {
+    background-color: #ffc107;
+    color: #222;
+    border: 1px solid #ffc107;
+}
+.button-signup:hover {
+    background-color: #e0a800;
+    border-color: #e0a800;
+}
+
+.account-menu {
+    /* Specific styling for account menu if needed */
+}
+.account-dropdown {
+    left: auto; /* Reset left for right alignment */
+    right: 0; /* Align to the right */
+}
+
+.logout-button {
+  /* Ensure it blends with other dropdown items */
+}

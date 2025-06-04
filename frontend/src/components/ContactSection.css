@@ -1,0 +1,107 @@
+/* ContactSection.css or Footer.css */
+.contact-footer-section {
+    background-color: #282c34; /* Dark footer */
+    color: #ccc;
+    padding: 50px 0 20px;
+    font-size: 0.95em;
+}
+
+.contact-footer-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-column h3 {
+    color: #ffc107; /* Accent color for headings */
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #555;
+    padding-bottom: 8px;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+.contact-info a {
+    color: #aaa;
+    text-decoration: none;
+}
+.contact-info a:hover {
+    color: #ffc107;
+    text-decoration: underline;
+}
+
+.feedback-form div {
+    margin-bottom: 15px;
+}
+.feedback-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ddd;
+}
+.feedback-form input[type="text"],
+.feedback-form input[type="email"],
+.feedback-form textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: #3a3f47;
+    border: 1px solid #555;
+    color: #f0f0f0;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.feedback-form textarea {
+    resize: vertical;
+}
+.feedback-form .button-submit-feedback {
+    background-color: #ffc107;
+    color: #222;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.feedback-form .button-submit-feedback:hover {
+    background-color: #e0a800;
+}
+.form-status-message {
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 4px;
+    background-color: #444;
+    color: #eee;
+}
+
+.quick-links ul {
+    list-style: none;
+    padding: 0;
+}
+.quick-links ul li {
+    margin-bottom: 8px;
+}
+.quick-links ul li a {
+    color: #aaa;
+    text-decoration: none;
+}
+.quick-links ul li a:hover {
+    color: #ffc107;
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    font-size: 0.9em;
+    color: #888;
+}

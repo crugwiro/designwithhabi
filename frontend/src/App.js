@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import Nav from './components/Nav';
 import Login from './components/Auth/Login';
@@ -7,6 +7,9 @@ import ClassList from './components/Classes/ClassList';
 import MyBookings from './components/Bookings/MyBookings';
 import AdminClassList from './components/Classes/AdminClassList';
 import AdminClassForm from './components/Classes/AdminClassForm';
+import HeroSection from './components/HeroSection';
+import TodaysClasses from './components/TodaysClasses';
+import ContactSection from './components/ContactSection';
 import './App.css';
 
 function App() {
@@ -51,6 +54,9 @@ function App() {
     return (
         <Router>
             <Nav user={currentUser} onLogout={handleLogout} />
+            <HeroSection />
+            <TodaysClasses />
+            <ContactSection />
             <div className="container">
                 <Routes>
                     <Route path="/login" element={currentUser ? <Navigate to="/" /> : <Login onLoginSuccess={handleLogin} />} />
